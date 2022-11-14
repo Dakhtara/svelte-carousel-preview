@@ -42,32 +42,30 @@ let imageMobile;
 
 <div class="container">
     <h1 class="fs-24">Carousel Preview</h1>
-
-
     <p>Here you can test your Carousel Preview before implementing it</p>
 
-    <div class="row mb-3">
+    <div class="row mb-3 mt-3">
         <div class="col-md-3 mb-2">
             <div class="form-group">
-                <label for="title" class="form-label">Title</label>
+                <label for="title" class="fw-bold form-label">Title</label>
                 <input id="title" class="form-control" type="text" bind:value={title} />
             </div>
         </div>
         <div class="col-md-3 mb-2">
             <div class="form-group">
-                <label for="description" class="form-label">Description</label>
-                <textarea id="description" class="form-control" bind:value={description}></textarea>
+                <label for="description" class="fw-bold form-label">Description</label>
+                <textarea id="description" class="form-control" rows="4" bind:value={description}></textarea>
             </div>
         </div>
         <div class="col-md-3 mb-2">
             <div class="form-group">
-                <label for="buttonLabel" class="form-label">Button Label</label>
+                <label for="buttonLabel" class="fw-bold form-label">Button Label</label>
                 <input id="buttonLabel" type="text" class="form-control" bind:value={buttonLabel} />
             </div>
         </div>
         <div class="col-md-3 mb-2">
             <div class="form-group">
-                <span class="form-label">Button Theme</span>
+                <span class="fw-bold form-label">Button Theme</span>
                 <br>
                 <input id="buttonTheme_Primary" type="radio" class="form-check-input" bind:group={buttonTheme} value={'primary'}/>
                 <label class="form-chec-label" for="buttonTheme_Primary">Primary</label>
@@ -81,7 +79,7 @@ let imageMobile;
         </div>
         <div class="col-md-3 mb-2">
             <div class="form-group">
-                <span class="form-label">Badge</span>
+                <span class="fw-bold form-label">Badge</span>
                 <br>
                 <input id="badge_none" type="radio" class="form-check-input" bind:group={badge} value={'none'}/>
                 <label class="form-chec-label" for="badge_none">No Badge</label>
@@ -95,7 +93,7 @@ let imageMobile;
         </div>
         <div class="col-md-3 mb-2">
             <div class="form-group">
-                <label  class="form-label">Position content</label>
+                <span class="fw-bold form-label">Position content</span>
                 <br>
                 <input id="position_left" type="radio" class="form-check-input" bind:group={positionContent} value={'left'} />
                 <label class="form-check-label" for="position_left">Left</label>
@@ -106,7 +104,7 @@ let imageMobile;
         </div>
         <div class="col-md-3 mb-2">
             <div class="form-group">
-                <label  class="form-label">Theme</label>
+                <label class="fw-bold form-label">Theme</label>
                 <br>
                 <input id="theme_white" type="radio" class="form-check-input" bind:group={theme} value={'white'} />
                 <label class="form-check-label" for="theme_white">White</label>
@@ -117,16 +115,16 @@ let imageMobile;
         </div>
 
         <div class="col-md-3 mb-2">
-            <label for="file_desktop">Image Desktop</label>
+            <label for="file_desktop" class="fw-bold form-label">Image Desktop</label>
             <input id="file_desktop" type="file" on:change={handleImage} accept="image/*" />
         </div>
         <div class="col-md-3 mb-2">
-            <label for="file_mobile">Image Mobile</label>
+            <label for="file_mobile" class="fw-bold form-label">Image Mobile</label>
             <input id="file_mobile" type="file" on:change={handleImageMobile} accept="image/*" />
         </div>
     </div>
 
-    <p>To watch on mobile, please resize the window directly</p>
+    <p class="fw-bold">To watch on mobile, please resize the window directly</p>
     <div class="swiper">
         <CarouselItem {title} {description} {buttonLabel} {buttonTheme} {positionContent} {badge} {theme} {image} {imageMobile}/>
     </div>
